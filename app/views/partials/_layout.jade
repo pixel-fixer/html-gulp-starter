@@ -4,166 +4,21 @@ html(lang="ru")
   head
     block head
       meta(charset="UTF-8")
-      title Фаберлик.онлайн
+      title title
       meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
       meta(name="viewport", content="width=device-width, initial-scale=1")
       include ./_bower_css.jade
-      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext")
-      link(rel="stylesheet", href="styles/jquery-ui.min.css")
       link(rel="stylesheet", href="styles/main.css?time=#TIME#")
       link(rel="icon", href="/favicon.ico", type="image/x-icon")
   body
     div#page_wrap
       header
         block header
-          .header__top
-            .fl_container
-              .nav_icon_block
-                #nav-icon3.nav-icon
-                  span
-                  span
-                  span
-                  span
-                span.nav_icon_block__text Меню
-              .b_main_menu.pull-left
-                ul
-                  li
-                    a(href="") Главная
-                  li
-                    a(href="") Каталог
-                    ul.b_main_menu__sub
-                      li: a(href="") Под меню 1
-                      li: a(href="") Под меню 2
-                  li: a(href="") О faberlic
-                  li: a(href="") Акция
-                  li: a(href="") История успеха
-                  li: a(href="") Маркетинг план
-                  li: a(href="") Статьи
-                  li: a(href="") Контакты
-                .header__phone +7 (951) 123-27-04
-              .b_header_top_links.pull-right
-                a(href="").b_header_top_links__callback
-                  +icon('button_call')
-                  | Заказать звонок
-                a(href="").b_header_top_links__login
-                  +icon('button_personal')
-                  | Вход
-          .fl_container
-            .header.flex.flex-content-between.flex_items--center
-              .header__logo__wrap
-                a(href="").header__logo
-                  img(src="img/logo_mobile.png", alt="")
-                  span Фаберлик.Онлайн
-              .row.around-xs.header__links
-                div
-                  a(href="").pink
-                    //- i.icon.icon-buy
-                    +icon('header_icon_1')
-                    | Покупай
-                div
-                  a(href="").green
-                    //- i.icon.icon-get
-                    +icon('header_icon_2')
-                    | Зарабатывай
-                div
-                  a(href="").blue
-                    //- i.icon.icon-biz
-                    +icon('header_icon_3')
-                    | Делай бизнес
-              .header__phone +7 (951) 123-27-04
+          
       block content
     block footer
       footer
-        .fl_container
-          .nav_icon_block.nav_icon_block--footer
-            #nav-icon3.nav-icon
-              span
-              span
-              span
-              span
-            span.nav_icon_block__text Меню
-          .b_main_menu.b_main_menu--footer.pull-left
-            ul
-              li
-                a(href="") Главная
-              li
-                a(href="") Каталог
-                ul.b_main_menu__sub
-                  li: a(href="") Под меню 1
-                  li: a(href="") Под меню 2
-              li: a(href="") О faberlic
-              li: a(href="") Акция
-              li: a(href="") История успеха
-              li: a(href="") Маркетинг план
-              li: a(href="") Статьи
-              li: a(href="") Контакты
-          .b_header_top_links.pull-right
-            a(href="").b_header_top_links__callback
-              +icon('button_call')
-              | Заказать звонок
-            a(href="").b_header_top_links__login
-              +icon('button_personal')
-              | Вход
-        .cf
-        .b_footerMain
-          .fl_container
-            .b_footerMain__container.flex.flex-content-between.flex_wrap--wrap
-              a(href="").logo_footer: img(src="img/logo_footer.png", alt="")
-              .b_footerMain__text Сегодня уже более 1 000 000 человек в 20 странах мира связали свою жизнь с Фаберлик ( Faberlic ), стали партнерами компании и ежедневно дарят красоту и молодость миллионам женщин, предлагая косметику по-настоящему эффективную и при этом доступную.
-              .b_footerMain__share
-                .b_footerMain__share__name Поделиться
-                .b_footerMain__share__links.flex.flex-content-between
-                    a(href="")
-                      img(src="img/share_1.png", alt="")
-                    a(href="")
-                      img(src="img/share_2.png", alt="")
-                    a(href="")
-                      img(src="img/share_3.png", alt="")
-                    a(href="")
-                      img(src="img/share_4.png", alt="")
-                    a(href="")
-                      img(src="img/share_5.png", alt="")
-                    a(href="")
-                      img(src="img/share_6.png", alt="")
-        .remodal.remodal__city_choose(data-remodal-id='remodal_city_choose')
-          .remodal__header 
-            a(href="", data-remodal-action='close').remodal__header__close
-            | Выбор города, населенного пункта
-          .remodal__content.remodal__info 
-          .city_choose__form
-            form(action="")
-              .row.city_choose__row
-                .col-xs-12.col-sm-3.city_choose__label
-                  | Населенный пункт  
-                .col-xs-12.col-sm-7
-                  .form_control
-                    input(type="text", name='CITY').input
-                .col-xs-12.col-sm-2
-                  .form_control
-                    button(type='submit').btn.btn--zoom_icon Искать
-              .row.city_choose__row
-                .col-xs-12.col-sm-3.city_choose__label
-                  | Район города
-                .col-xs-12.col-sm-7
-                  .form_control
-                    .input.input--select.b_select.b_select--default
-                      .b_select__val.b_select--placeholder
-                      .b_select__options
-                      select(id='i6', name="AREA", data-rules='required')
-                        options
-                          option(value="") Не выбрано
-                          option(value="1") Ленинский
-                          option(value="2") ЧМЗ
-                .col-xs-12.col-sm-2
-                  .form_control
-                    button(type='submit').btn.btn--arrow_right_icon Выбрать
-
+      
       include ./_bower_js.jade
-      script(type="text/javascript",  src="js/jquery-ui.min.js")
-      script(type="text/javascript",  src="js/jquery.ui.touch-punch.min.js")
-      script(type="text/javascript",  src="js/vue.min.js")
-      script(type="text/javascript",  src="js/profit_calc.js")
-      script(type="text/javascript",  src="js/custom_select.js")
-      script(type="text/javascript",  src="js/form_validate.js")
       script(type="text/javascript",  src="js/script.js?time=#TIME#")
       
