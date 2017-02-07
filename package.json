@@ -1,0 +1,35 @@
+{
+  "name": "pf74_boilerplate_project",
+  "version": "0.5.5",
+  "scripts": {
+    "build": "gulp clean && gulp build",
+    "deploy": "gulp clean && gulp build && gulp deploy"
+  },
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-clean-css": "latest",
+    "gulp-connect": "latest",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "latest",
+    "gulp-insert": "latest",
+    "gulp-livereload": "latest",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "^0.5.4",
+    "gulp-rimraf": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylus": "latest",
+    "gulp-svg-symbols": "latest",
+    "gulp-uglify": "latest",
+    "gulp-useref": "latest",
+    "gulp-util": "^3.0.7",
+    "gulp.spritesmith": "latest",
+    "rimraf": "latest",
+    "vinyl-ftp": "^0.5.0",
+    "wiredep": "latest"
+  }
+}

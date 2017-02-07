@@ -1,0 +1,21 @@
+$svg_path = '../img/icons.svg';
+
+<% _.each(icons, function (icon) {
+	%>$<%= icon.className %> = <%= icon.width %> <%= icon.height %> '../img/icons.svg#<%= icon.className %>'
+$<%= icon.className %>_id = 'icon_<%= icon.className %>'
+<% });%>
+
+svgSize($icon)
+	width $icon[0]
+	height $icon[1]
+
+svg_presudo($icon)
+	content: url($icon[2]);
+	svgSize($icon)
+	background-size: 20px 20px;
+
+// <% _.each(icons, function (icon) { %>
+// .icon_<%= icon.className %>
+// 	// width: <%= icon.width %>
+// 	// height: <%= icon.height %>
+// <% });%>
