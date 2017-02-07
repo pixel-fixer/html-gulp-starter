@@ -1,6 +1,6 @@
 # html gulp starter
 
-//TODO
+//TODO  
 1. add ES6/Babel  
 2. add webpack  
 3. get a job  
